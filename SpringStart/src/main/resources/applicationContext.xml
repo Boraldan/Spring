@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    <bean id="testBean"-->
+    <!--          class="ru.boraldan.springcourse.TestBean">-->
+    <!--        <constructor-arg value="Alex"/>-->
+    <!--    </bean>-->
+
+    <!--    <bean id="classicalMusic"-->
+    <!--          class="ru.boraldan.springcourse.ClassicalMusic">-->
+    <!--    </bean>-->
+
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+    <bean id="musicBean"
+          class="ru.boraldan.springcourse.TranseVocal">
+    </bean>
+
+    <bean id="musicBean2"
+          class="ru.boraldan.springcourse.ClassicalMusic"
+          init-method="doMyInit"
+          destroy-method="doMyDestroy"
+          scope="prototype">
+
+    </bean>
+
+    <bean id="musicBean3"
+          class="ru.boraldan.springcourse.RockMusic">
+    </bean>
+
+    <bean id="musicBean8"
+          class="ru.boraldan.springcourse.ClassicalMusicL8Factory"
+          scope="prototype"
+          factory-method="getClassikalMusicL8Fact">
+    </bean>
+
+    <bean id="musicPlayer"
+          class="ru.boraldan.springcourse.MusicPlayer"
+          scope="prototype">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
+    <bean id="musicPlayer2"
+          class="ru.boraldan.springcourse.MusicPlayer">
+        <property name="music" ref="musicBean2"/>
+        <property name="name" value="Name Plyaer Lessone 6"/>
+        <property name="volume" value="50"/>
+    </bean>
+
+    <bean id="musicPlayer3"
+          class="ru.boraldan.springcourse.MusicPlayer">
+        <property name="music" ref="musicBean3"/>
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
+
+    <bean id="musicPlayerList"
+          class="ru.boraldan.springcourse.MusicPlayer">
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
+        <property name="musicList">
+            <list>
+                <ref bean="musicBean"/>
+                <ref bean="musicBean2"/>
+                <ref bean="musicBean3"/>
+
+            </list>
+        </property>
+    </bean>
+
+</beans>

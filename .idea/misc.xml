@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/SpringStart/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringAnnotation/pom.xml" />
+        <option value="$PROJECT_DIR$/MVC/pom.xml" />
+        <option value="$PROJECT_DIR$/CRUD/pom.xml" />
+        <option value="$PROJECT_DIR$/FormsValidation/pom.xml" />
+        <option value="$PROJECT_DIR$/JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/JdbcTemplate/pom.xml" />
+        <option value="$PROJECT_DIR$/_temp/pom.xml" />
+        <option value="$PROJECT_DIR$/SelectOptional/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/MVC/untitled/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="18" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="SpringStart" />
+        <module name="CRUD" />
+        <module name="FormsValidation" />
+        <module name="Les17ContrAnat" />
+        <module name="SpringAnnotation" />
+        <module name="Les16JavaConf" />
+        <module name="JDBC" />
+        <module name="JdbcTemplate" />
+        <module name="Les15XmlConf" />
+        <module name="SelectOptional" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_temp_222" target="18" />
+      <module name="untitled" target="18" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

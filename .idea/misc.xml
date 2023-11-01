@@ -13,11 +13,22 @@
         <option value="$PROJECT_DIR$/JdbcTemplate/pom.xml" />
         <option value="$PROJECT_DIR$/_temp/pom.xml" />
         <option value="$PROJECT_DIR$/SelectOptional/pom.xml" />
+        <option value="$PROJECT_DIR$/ProjectN1/pom.xml" />
+        <option value="$PROJECT_DIR$/ru.boraldan.sping/pom.xml" />
+        <option value="$PROJECT_DIR$/Project1Solution-master/pom.xml" />
+        <option value="$PROJECT_DIR$/Hibernate/HibernateStart/pom.xml" />
+        <option value="$PROJECT_DIR$/Hibernate/OnetoMany/pom.xml" />
+        <option value="$PROJECT_DIR$/Hibernate/OneToOne/pom.xml" />
+        <option value="$PROJECT_DIR$/Hibernate/ManyToMamy/pom.xml" />
+        <option value="$PROJECT_DIR$/HibernateSpring/pom.xml" />
+        <option value="$PROJECT_DIR$/Test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/HibernateSpring/pom.xml" />
         <option value="$PROJECT_DIR$/MVC/untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/SelectOptional/pom.xml" />
       </set>
     </option>
   </component>

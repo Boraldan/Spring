@@ -6,20 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ProjectN1" />
         <module name="SpringStart" />
         <module name="CRUD" />
+        <module name="OnetoMany" />
+        <module name="ManyToMamy" />
+        <module name="JdbcTemplate" />
+        <module name="SelectOptional" />
+        <module name="OneToOne" />
         <module name="FormsValidation" />
         <module name="Les17ContrAnat" />
+        <module name="Test" />
         <module name="SpringAnnotation" />
         <module name="Les16JavaConf" />
         <module name="JDBC" />
-        <module name="JdbcTemplate" />
         <module name="Les15XmlConf" />
-        <module name="SelectOptional" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="_temp_222" target="18" />
+      <module name="HibernateSpring" target="1.8" />
+      <module name="Project1Solution-master" target="18" />
+      <module name="ru.boraldan.sping" target="18" />
+      <module name="SelectOptional" target="18" />
+      <module name="spring-project1" target="1.7" />
+      <module name="Start_HQL" target="9" />
       <module name="untitled" target="18" />
     </bytecodeTargetLevel>
   </component>

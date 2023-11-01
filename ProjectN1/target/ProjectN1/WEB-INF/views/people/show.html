@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Show people</title>
+</head>
+<body>
+<p th:text="${person.getId() + ', ' + person.getName() + ', ' + person.getAge()}">VALUE</p>
+<p th:text="${'Email: ' + person.getEmail()}">VALUE</p>
+<p th:text="${'Address: ' + person.getAddress()}">VALUE</p>
+<div><a th:href="@{/people/{id}/edit(id=${person.getId()})}">Edit</a>
+    <form th:method="DELETE" th:action="@{/people/{id}(id=${person.getId()})}">
+        <input type="submit" value="Delete"/>
+    </form>
+</div>
+<hr>
+<br>
+<a style="color:red" th:if="${library.isEmpty()}">У читателя нет книг.</a>
+<br>
+<div th:each="book : ${library}">
+    <a th:href="@{/library/{id}(id=${book.getId()})}"
+       th:text="${book.getId() + ', ' + book.getName() + ', ' + book.getAuthor()  + ', ' + book.getYear()}">book</a>
+    <form th:method="PATCH" th:action="@{/library/{id}/pick(id=${book.getId()})}">
+        <input type="submit" value="Вернуть книгу"/>
+    </form>
+</div>
+<hr>
+<div th:unless="${bookFree.isEmpty()}">
+    <form th:method="PATCH" th:action="@{/library/take/{id}(id=${person.getId()})}">
+        <label for="book">Выдать книгу </label>
+        <select th:object="${book}" th:field="*{id}" id="book">
+            <option th:each="book : ${bookFree}" th:value="${book.getId()}"
+                    th:text="${book.getName() + ', ' + book.getAuthor()  + ', ' + book.getYear()}"></option>
+        </select>
+        <input type="submit" value="Выдать книгу"/>
+    </form>
+</div>
+<a style="color:red" th:if="${bookFree.isEmpty()}">Книги закончились, sorry.</a>
+
+</body>
+</html>
